@@ -3,11 +3,11 @@ import connectDB from "./Database/connection.js";
 import { globalErrorHandler } from "./Utils/errorHandling.js";
 import cors from "cors"
 // Path & dirname
-import path from "path"
-import { fileURLToPath } from "url"
+// import path from "path"
+// import { fileURLToPath } from "url"
 import routers from "./Utils/routers.js";
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const fullPath = path.join(__dirname, "./uploads")
+// const __dirname = path.dirname(fileURLToPath(import.meta.url))
+// const fullPath = path.join(__dirname, "./uploads")
 // Init App 
 const initApp = (app, express) => {
     // Make Routes Case Sensitive ( Must Before Buffer Data)
@@ -19,7 +19,7 @@ const initApp = (app, express) => {
     // Database Connection
     connectDB();
     // Allow Open Uploaded Files
-    app.use(express.static(fullPath))
+    // app.use(express.static(fullPath))
     // Morgan
     if (process.env.MOOD == "DEV") {
         app.use(morgan('dev'))
