@@ -10,14 +10,14 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const fullPath = path.join(__dirname, "./uploads")
 // Init App 
 const initApp = (app, express) => {
-    // Database Connection
-    connectDB();
     // Make Routes Case Sensitive ( Must Before Buffer Data)
     app.set("case sensitive routing", true);
-    // To Allow Front End Request
-    app.use(cors());
     // Convert BufferData
     app.use(express.json({}));
+    // To Allow Front End Request
+    app.use(cors());
+    // Database Connection
+    connectDB();
     // Allow Open Uploaded Files
     app.use(express.static(fullPath))
     // Morgan
