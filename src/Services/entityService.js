@@ -33,8 +33,6 @@ export const updateEntity = (model, entityName) => {
             req.body.slug = slugify(req.body.name)
         }
         // Assign file to image
-        console.log(req.file);
-
         if (req.file) {
             req.body.image = req.file.filename
         } else {

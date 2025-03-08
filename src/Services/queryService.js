@@ -30,7 +30,6 @@ export const filterQuery = (mongooseQuery, reqQuery) => {
 export const sortQuery = (mongooseQuery, reqQuery) => {
     if (reqQuery.sort) {
         const sortedBy = reqQuery.sort.split(",").join(" ");
-        console.log(typeof mongooseQuery);
         return mongooseQuery.sort(sortedBy);
     }
     return mongooseQuery;

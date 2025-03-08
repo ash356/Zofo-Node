@@ -29,7 +29,6 @@ const sendEmail = async ({
           html,
           attachments,
      });
-     // console.log(info);
      return info.rejected.length ? false : true;
 };
 export default sendEmail;

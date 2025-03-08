@@ -35,7 +35,6 @@ const initApp = (app, express) => {
     routers(app)
     // Error Handling
     app.all("*", (req, res, next) => {
-        // console.log({ req });
         return next(new Error(`In-Valid Routing ❗ => ${req.originalUrl}`, { cause: 404 }))
     })
     // Global Error Handling Middleware

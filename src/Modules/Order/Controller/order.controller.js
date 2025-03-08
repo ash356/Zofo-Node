@@ -55,7 +55,6 @@ export const createOrder = asyncHandler(
             product.finalPrice = parseFloat((product.quantity * checkProduct.price).toFixed(2))
             productsList.push(product)
             subtotalPrice += product.finalPrice
-            // console.log(subtotalPrice);
         }
         // Calculate Discount
         const discount = req.body.coupon ? (subtotalPrice * req.body.coupon.discount) / 100 : 0;

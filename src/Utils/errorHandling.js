@@ -17,7 +17,6 @@ export const globalErrorHandler = (err, req, res, next) => {
         }
         // Check DEV Mood
         if (process.env.MOOD == "DEV") {
-            // console.log(err.cause);
             // Return on DEV Mood
             return res.status(err.cause || 500).json({
                 message: err.message,

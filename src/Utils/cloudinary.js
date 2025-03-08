@@ -7,7 +7,4 @@ cloudinary.v2.config({
     api_secret: process.env.API_SECRET,
     secret: true,
 });
-// console.log(process.env.CLOUD_NAME);
-// console.log(process.env.API_KEY);
-// console.log(process.env.API_SECRET);
 export default cloudinary.v2;
