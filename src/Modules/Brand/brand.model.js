@@ -14,9 +14,6 @@ const brandSchema = new Schema({
         lowercase: true,
     },
     image: {
-        type: Object,
-    },
-    image: {
         secure_url: { type: String, required: true },
         public_id: { type: String, required: true },
     }
