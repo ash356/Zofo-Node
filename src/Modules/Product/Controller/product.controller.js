@@ -20,7 +20,7 @@ export const createProduct = asyncHandler(async (req, res, next) => {
         const { secure_url, public_id } = await cloudinary.uploader.upload(
             coverFile.path,
             {
-                folder: `${process.env.APP_NAME}/products/${product._id}/cover`,
+                folder: `${process.env.APP_NAME}/products/${product._id}`,
             }
         );
         product.coverPic = { secure_url, public_id }
