@@ -36,7 +36,7 @@
 
 ### 1️⃣ Clone the Repository
 ```sh
-git clone https://github.com/yourusername/zofo.git
+git clone https://github.com/ash356/Zofo-Node.git
 cd zofo
 ```
 
