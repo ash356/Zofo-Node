@@ -18,6 +18,7 @@ export const createProduct = joi.object({
         coverPic: joi.array().items(generalFields.file).required(),
         productImages: joi.array().items(generalFields.file).optional(),
     }).required(),
+    targetAudience: joi.string().valid('Male', 'Female', 'Unisex', 'Kids')
 
 })
 // getProduct

@@ -67,7 +67,8 @@ const productSchema = new Schema({
         required: true,
         default: 0
     },
-    isDeleted: { type: Boolean, default: false }
+    isDeleted: { type: Boolean, default: false },
+    targetAudience: { type: String, enum: ["Male", "Female", "Unisex", "Kids"], default: null }
 }, { timestamps: true, toJSON: { virtuals: true }, toObject: { virtuals: true } })
 // Virtual Populate
 productSchema.virtual('Reviews', {
