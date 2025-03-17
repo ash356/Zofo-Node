@@ -13,6 +13,11 @@
 - ✅ **Error Handling & Validation**: Ensuring data integrity.
 - 📧 **Email Notifications**: Order confirmations via NodeMailer.
 - 🌍 **CORS Handling**: Secure API access for frontend applications.
+- 📜 **Joi Validation**: Input validation to ensure data integrity.
+- 🧾 **Invoice Generation**: Create invoices for customer purchases.
+- 📄 **Pagination**: Efficient data handling for product listings.
+- 🔑 **NanoID**: Unique and secure ID generation.
+- 🔒 **bcryptjs**: Secure password hashing.
 
 ## 🛠 Technologies Used
 - **🟢 Node.js** - Backend runtime.
@@ -23,6 +28,9 @@
 - **🌐 CORS** - Handling cross-origin requests.
 - **📨 NodeMailer** - Sending transactional emails.
 - **📮 Postman** - API testing and development.
+- **📏 Joi** - Schema validation for API data.
+- **🔑 NanoID** - Lightweight unique ID generator.
+- **🔒 bcryptjs** - Secure password encryption.
 
 ## 🚀 Installation
 
@@ -37,21 +45,7 @@ cd zofo
 npm install
 ```
 
-### 3️⃣ Set Up Environment Variables
-Create a `.env` file and add the following variables:
-```
-MONGO_URI=your_mongodb_connection_string
-CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
-CLOUDINARY_API_KEY=your_cloudinary_api_key
-CLOUDINARY_API_SECRET=your_cloudinary_api_secret
-JWT_SECRET=your_jwt_secret
-EMAIL_HOST=your_email_host
-EMAIL_PORT=your_email_port
-EMAIL_USER=your_email_username
-EMAIL_PASS=your_email_password
-```
-
-### 4️⃣ Start the Server
+### 3️⃣ Start the Server
 ```sh
 npm start
 ```
@@ -61,9 +55,8 @@ npm start
 2. **🛒 Browse & Search**: View products and apply filters.
 3. **🛍️ Add to Cart & Checkout**: Securely add items to the cart and complete purchases.
 4. **📦 Manage Orders**: Track order history and status.
+5. **🧾 Generate Invoices**: Download invoices for orders.
+6. **📄 Use Pagination**: Improve performance while browsing products.
 
 ## 🛠 API Testing
 Use **Postman** to test API endpoints with the provided Postman Collection.
-
-## 📜 License
-This project is licensed under the **MIT License**.
