@@ -15,7 +15,7 @@ const initApp = (app, express) => {
     // Convert BufferData
     app.use(express.json({}));
     // To Allow Front End Request
-    app.use(cors());
+    app.use(cors())
     // Database Connection
     connectDB();
     // Allow Open Uploaded Files
