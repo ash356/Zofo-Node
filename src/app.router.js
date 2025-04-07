@@ -15,12 +15,7 @@ const initApp = (app, express) => {
     // Convert BufferData
     app.use(express.json({}));
     // To Allow Front End Request
-    // app.use(cors());
-    app.use(cors({
-    origin: 'http://localhost:3000', // Allows only this specific origin
-    methods: ['GET', 'POST', 'DELETE', 'PATCH'],  // Specify allowed methods
-    allowedHeaders: ['Content-Type', 'Authorization']  // Specify allowed headers
-    }));
+    app.use(cors())
     // Database Connection
     connectDB();
     // Allow Open Uploaded Files
