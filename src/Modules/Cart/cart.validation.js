@@ -20,6 +20,6 @@ export const applyCoupon = joi.object({
     code: joi.string().min(3).required()
 }).required();
 // clearCartSchema
-export const clearCartSchema = joi.object({
-    id: generalFields.id
-}).required()
+// export const clearCartSchema = joi.object({
+//     id: generalFields.id
+// }).required()

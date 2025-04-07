@@ -17,7 +17,7 @@ router.put('/coupon', validation(validators.applyCoupon), cartController.applyCo
 // Get User Cart
 router.get('/', cartController.getUserCart)
 // Clear Cart
-router.delete('/:id', validation(validators.clearCartSchema), cartController.clearCart)
+router.delete('/', cartController.clearCart)
 
 
 export default router
