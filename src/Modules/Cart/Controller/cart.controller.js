@@ -135,3 +135,15 @@ export const getUserCart = asyncHandler(async (req, res, next) => {
     }
     return res.status(201).json({ message: "Done", length: cart.cartItems.length, cart });
 })
+// Clear Cart
+export const clearCart = asyncHandler(async (req, res, next) => {
+    const { id } = req.params;
+    const cart = await cartModel.findByIdAndDelete(id)
+    // Check Cart
+    if (!cart) {
+        return next(new Error(`Cart Not Found !`, { cause: 404 }))
+    }
+    // Success
+    return res.status(200).json({ message: `Cart Deleted` })
+
+})

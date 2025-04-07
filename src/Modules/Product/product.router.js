@@ -9,7 +9,7 @@ const router = Router();
 router.post("/", auth, authorization(roles.Admin),
     fileUploadCloudinary(fileValidationCloudinary.image).fields([
         { name: 'coverPic', maxCount: 1 },
-        { name: 'productImages', maxCount: 10 }]),
+        { name: 'productImages', maxCount: 12 }]),
     validation(validators.createProduct),
     productController.createProduct);
 // getAllproducts
