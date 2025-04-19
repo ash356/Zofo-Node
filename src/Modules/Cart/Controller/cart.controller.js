@@ -129,7 +129,12 @@ export const applyCoupon = asyncHandler(async (req, res, next) => {
 // Get User Cart
 export const getUserCart = asyncHandler(async (req, res, next) => {
     // Cart Query
-    const cart = await cartModel.findOne({ userId: req.user._id }).select('cartItems totalPrice totalPriceAfterDiscount');
+    const cart = await cartModel.findOne({ userId: req.user._id })
+        .select('cartItems totalPrice totalPriceAfterDiscount')
+        .populate({
+            path: 'cartItems.productId',
+            select: 'name slug description coverPic price productImages stock colors brandId categoryId'
+        });
     if (!cart) {
         return next(new Error("Cart Items Not Found !", { cause: 404 }));
     }
